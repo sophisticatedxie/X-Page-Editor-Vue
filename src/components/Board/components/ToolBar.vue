@@ -1,5 +1,5 @@
 /**
-* Created by OXOYO on 2018/3/27.
+* Created by xiejr on 2020/07/20
 *
 * 画板工具栏
 */
@@ -114,7 +114,7 @@ export default {
         {
           name: 'expand',
           text: '展开',
-          icon: 'expand',
+          icon: 'quanping',
           category: 'expand',
           enable: true,
           action: {
@@ -130,7 +130,7 @@ export default {
         {
           name: 'fold',
           text: '折叠',
-          icon: 'fold',
+          icon: 'huanyuanpingmudaxiao',
           category: 'expand',
           enable: true,
           action: {
@@ -146,7 +146,7 @@ export default {
         {
           name: 'zoom-in',
           text: '放大',
-          icon: 'zoom-in',
+          icon: 'fangda1',
           category: 'zoom',
           enable: true,
           action: {
@@ -167,7 +167,7 @@ export default {
         {
           name: 'zoom-reset',
           text: '还原',
-          icon: 'zoom',
+          icon: 'huanyuanpingmudaxiao',
           category: 'zoom',
           enable: true,
           action: {
@@ -188,7 +188,7 @@ export default {
         {
           name: 'zoom-out',
           text: '缩小',
-          icon: 'zoom-out',
+          icon: 'icon-test',
           category: 'zoom',
           enable: true,
           action: {

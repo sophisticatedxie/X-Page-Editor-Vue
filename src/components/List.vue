@@ -1,5 +1,5 @@
 /**
-* Created by OXOYO on 2018/3/21.
+* Created by xiejr on 2020/07/20
 *
 * 元素列表组件
 */
@@ -70,19 +70,10 @@
   <div :class="{'xpe_list': true, 'block_expand': isExpand}" :style="computedStyle">
     <div class="block_header">
       <div class="title">
-        资源列表
+        节点属性资源
       </div>
     </div>
     <div class="block_body">
-      <!--
-      <div
-        class="list_item"
-        v-for="(value, key) in config.data"
-        :key="key"
-      >
-        {{ key }}
-      </div>
-      -->
       <slot></slot>
     </div>
     <XPEHandler class="handler" mode="vertical" position="right" :expand="isExpand" :callback="toggleHandler"></XPEHandler>

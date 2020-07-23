@@ -1,5 +1,5 @@
 /**
-* Created by OXOYO on 2018/4/3.
+* Created by xiejr on 2020/7/18.
 *
 * 自定义列表元素组件
 */
@@ -95,8 +95,11 @@
     },
     methods: {
       handleDragStart: function (component, event) {
+        console.log('拖拽的组件是:')
+        console.log(component)
+        console.log('事件')
+        console.log(event)
         let _t = this
-        console.log('handleDragStart', component.name)
         // 拖拽的节点数据
         let nodeInfo = {
           // 唯一标识，防止在画布上拖拽时重复生成

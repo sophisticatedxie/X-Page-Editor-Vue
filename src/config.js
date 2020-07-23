@@ -1,5 +1,5 @@
 /**
- * Created by OXOYO on 2018/3/21.
+ * Created by xiejr on 2020/07/20
  *
  * 插件默认配置信息
  */

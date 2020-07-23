@@ -1,5 +1,5 @@
 /**
-* Created by OXOYO on 2018/3/22.
+* Created by xiejr on 2020/07/20
 *
 * 头部组件
 */
@@ -106,16 +106,7 @@
           @mousedown.stop.prevent
           @click.native.stop.prevent="handleAction('addProject')"
         >
-          <XPEIcon type="add-circle" title="新建项目"></XPEIcon>
-        </XUIButton>
-        <XUIButton
-          type="text"
-          class="btn-item"
-          @contextmenu.stop.prevent
-          @mousedown.stop.prevent
-          @click.native.stop.prevent="handleAction('ui')"
-        >
-          <XPEIcon type="ui" title="UI"></XPEIcon>
+          <XPEIcon type="xinjian" title="新建模板"></XPEIcon>
         </XUIButton>
         <XUIButton
           type="text"
@@ -124,7 +115,16 @@
           @mousedown.stop.prevent
           @click.native.stop.prevent="handleAction('preview')"
         >
-          <XPEIcon type="preview" title="预览"></XPEIcon>
+          <XPEIcon type="yulan" title="预览"></XPEIcon>
+        </XUIButton>
+        <XUIButton
+          type="text"
+          class="btn-item"
+          @contextmenu.stop.prevent
+          @mousedown.stop.prevent
+          @click.native.stop.prevent="handleAction('preview')"
+        >
+          <XPEIcon type="xml" title="生成"></XPEIcon>
         </XUIButton>
       </div>
     </div>
@@ -182,14 +182,13 @@ export default {
       })
     },
     handleAction: function (actionName) {
-      console.log('handleAction', actionName)
       let handleAddProject = function () {
         utils.bus.$emit('XPE/project/add')
       }
       switch (actionName) {
         case 'addProject':
-          handleAddProject()
-          break
+          handleAddProject();
+          break;
       }
     }
   },

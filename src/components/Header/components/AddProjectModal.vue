@@ -1,5 +1,5 @@
 /**
-* Created by OXOYO on 2018/4/3.
+* Created by xiejr on 2020/07/23
 *
 * 新建项目弹窗
 */
@@ -14,7 +14,7 @@
   <XUIModal
     class="xpe_add-project-modal"
     :value="isShow"
-    title="新建项目"
+    title="新建模板"
     :transfer="false"
     @on-ok="handleOK"
     @on-cancel="handleCancel"
@@ -27,7 +27,7 @@
       @keydown.native.enter.prevent
     >
       <XUIFormItem label="项目名称：" prop="name">
-        <XUIInput type="text" v-model="formData.name" placeholder="请输入项目名" style="width: 300px;"></XUIInput>
+        <XUIInput type="text" v-model="formData.name" placeholder="请输入模板名" style="width: 300px;"></XUIInput>
       </XUIFormItem>
       <!-- 模式 -->
       <XUIFormItem label="模式：" prop="type">

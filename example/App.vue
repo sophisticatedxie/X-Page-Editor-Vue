@@ -1,5 +1,5 @@
 /**
-* Created by OXOYO on 2018/3/21.
+* Created by xiejr on 2020/7/18.
 *
 * example 根组件
 */
@@ -21,7 +21,7 @@
 
 <template>
   <div id="app">
-    <a href="https://github.com/OXOYO/X-Page-Editor-Vue" target="_blank">
+    <a href="https://github.com/sophisticatedxie/X-Page-Editor-Vue" target="_blank">
       <img
         style="position: absolute; top: 0; right: 0; border: 0; z-index: 5000"
         src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"
@@ -59,7 +59,7 @@ export default {
             // 标题配置
             title: {
               enable: true,
-              text: 'XPE',
+              text: 'ODF编辑器平台',
               fullText: 'X-Page-Editor',
               subText: 'x-page-editor'
             },

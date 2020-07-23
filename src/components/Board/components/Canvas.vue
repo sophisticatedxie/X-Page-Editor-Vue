@@ -1,5 +1,5 @@
 /**
-* Created by OXOYO on 2018/4/8.
+* Created by Oxiejr on 2020/07/20
 *
 * 画布组件
 */
@@ -55,6 +55,7 @@
 <template>
   <div
     class="xpe_canvas"
+    ref="canvas"
   >
     <div
       v-for="item in canvasMap"
@@ -215,40 +216,11 @@ export default {
               style: '',
               category: 'iconfont'
             },
-            text: '显示 / 隐藏参考线',
+            text: '添加属性',
             enable: true,
             action: {
               type: 'bus',
               handler: 'XPE/scale/guides/toggle'
-            }
-          },
-          {
-            name: 'showToolTip',
-            icon: {
-              type: '',
-              style: '',
-              category: 'iconfont'
-            },
-            text: '显示 / 隐藏参考线坐标',
-            enable: true,
-            action: {
-              type: 'bus',
-              handler: 'XPE/scale/guides/toolTip/toggle'
-            }
-          },
-          {
-            name: 'clearGuides',
-            icon: {
-              type: '',
-              style: '',
-              category: 'iconfont'
-            },
-            text: '清空当前项目参考线',
-            enable: true,
-            action: {
-              type: 'bus',
-              handler: 'XPE/scale/guides/clear',
-              params: _t.currentProject
             }
           },
           {
@@ -273,6 +245,7 @@ export default {
     },
     // 元素上右键
     handleRightClickOnNode: function (nodeInfo, event) {
+        console.log(nodeInfo)
       let _t = this
       let xpeEl = document.querySelector('#xpe')
       let xVal
@@ -416,6 +389,7 @@ export default {
     },
     // 处理组件点击
     handleComponentTrigger: function (nodeInfo) {
+        console.log(nodeInfo)
       let _t = this
       // 更新当前操作的节点
       _t.currentNode = nodeInfo.id
@@ -448,6 +422,8 @@ export default {
     },
     // 元素drop
     handleDropOnCanvas: function (item, event) {
+        debugger
+
       let _t = this
       console.log('handleDropOnCanvas')
       let canvasMap = _t.canvasMap
@@ -632,6 +608,7 @@ export default {
       }
     },
     handleMouseOverOnNode: function (nodeInfo) {
+        debugger
       let _t = this
       // console.log('handleMouseOverOnNode')
       let target = document.querySelector('[node-id=' + nodeInfo.id + ']')
@@ -654,6 +631,7 @@ export default {
       }
     },
     handleMouseOutOnNode: function () {
+        debugger
       let _t = this
       // console.log('handleMouseOutOnNode')
       if (Object.keys(_t.canvasMap[_t.currentProject]['selectionStyleMap']).length) {
@@ -744,5 +722,7 @@ export default {
       _t.handleZoom(params)
     })
   }
+
+
 }
 </script>

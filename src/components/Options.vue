@@ -1,5 +1,5 @@
 /**
-* Created by OXOYO on 2018/3/21.
+* Created by xiejr on 2020/07/20
 *
 * 配置组件
 */
@@ -429,6 +429,7 @@ export default {
       */
       // 更新loading状态
       _t.loading = false
+
     },
     // 清空opstions
     clearOptions: function () {
